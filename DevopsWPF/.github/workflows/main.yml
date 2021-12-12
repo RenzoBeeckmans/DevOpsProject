@@ -15,3 +15,4 @@ jobs:
           heroku_api_key: ${{secrets.84ee7fa6-4b83-4630-8876-516352712995}}
           heroku_app_name: "devopswpf" #Must be unique in Heroku
           heroku_email: "r0841635@student.thomasmore.be"
+          usedocker: true
