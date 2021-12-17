@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute(".github/workflows/main.yml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute(".github/workflows/dotnet.yml")]
 
 
