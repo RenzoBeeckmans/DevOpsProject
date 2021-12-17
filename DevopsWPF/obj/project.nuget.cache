@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "XWCpC2MVSb4z/sfkQj4PjNET7LgqPu8AX3LbaQOwTHC1wstwQeY0d5YvFTqCLc6Xh4ZsYZ4QMNr2uI5R2exEyw==",
+  "dgSpecHash": "JIb26tvrh4EX7Ed7Qu76PvlDaXVAUrNQC2g7FvHzBXjDzR6p/Us0uzxHrM0xK5yRxkQC0c1hDtqDqcdNx3I3dw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Renzo\\Documents\\2e Bachelor Semester 1\\DevOps\\DevopsWPF\\DevopsWPF\\DevopsWPF.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Renzo\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\Renzo\\.nuget\\packages\\microsoft.data.sqlite\\6.0.1\\microsoft.data.sqlite.6.0.1.nupkg.sha512",
+    "C:\\Users\\Renzo\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.1\\microsoft.data.sqlite.core.6.0.1.nupkg.sha512",
+    "C:\\Users\\Renzo\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\Renzo\\.nuget\\packages\\sqlitepclraw.core\\2.0.6\\sqlitepclraw.core.2.0.6.nupkg.sha512",
+    "C:\\Users\\Renzo\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.6\\sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\Renzo\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.6\\sqlitepclraw.provider.e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\Renzo\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }

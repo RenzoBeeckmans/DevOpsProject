@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DevopsWPF.Models;
+
 
 namespace DevopsWPF
 {
@@ -23,6 +25,34 @@ namespace DevopsWPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        ClubRepository clubRepository = new ClubRepository();
+
+        private void Button_Add_Club(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(textClub.Text) && !listClub.Items.Contains(textClub.Text))
+            {
+                string name = textClub.Text;
+                listClub.Items.Add(name);
+                Club club = new Club { Name = name };
+                clubRepository.InsertClub(club);
+                textClub.Clear();    
+            }
+        }
+
+        private void Button_Delete_Club(object sender, EventArgs e)
+        {
+            var i = listClub.SelectedItem;
+            string name = listClub.SelectedValue.ToString();
+            clubRepository.DeleteClub(name);
+                listClub.Items.Remove(i);
+
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

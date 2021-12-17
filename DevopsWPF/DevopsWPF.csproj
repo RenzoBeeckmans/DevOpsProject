@@ -2,8 +2,27 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ClubRepository.cs" />
+    <Compile Remove="SqlLiteBaseRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include=".github\workflows\main.yml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Dal\ClubRepository.cs" />
+    <None Include="Dal\SqlLiteBaseRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.1" />
+  </ItemGroup>
 
 </Project>
