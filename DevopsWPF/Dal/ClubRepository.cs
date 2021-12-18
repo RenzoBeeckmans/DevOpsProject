@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DevopsWPF.Models;
 
-namespace DevopsWPF
+namespace DevopsWPF.Dal
 {
     class ClubRepository : SqlLiteBaseRepository
     {
@@ -30,7 +30,7 @@ namespace DevopsWPF
 
         public int DeleteClub(string name)
         {
-            string sql = "DELETE FROM Club WHERE Name = name;";
+            string sql = "DELETE FROM Club WHERE Name = @Name;";
 
             using (var connection = DbConnectionFactory())
             {
@@ -41,7 +41,7 @@ namespace DevopsWPF
 
         public IEnumerable<Club> GetClubs()
         {
-            string sql = "SELECT * FROM Club;";
+            string sql = "SELECT Name FROM Club;";
 
             using (var connection = DbConnectionFactory())
             {

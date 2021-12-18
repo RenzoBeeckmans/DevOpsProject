@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DevopsWPF.Models;
+using DevopsWPF.Dal;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
 
 namespace DevopsWPF
@@ -22,12 +25,40 @@ namespace DevopsWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ClubRepository clubRepository;
+        private SortedSet<Club> clubs;
         public MainWindow()
         {
             InitializeComponent();
+            clubRepository = new ClubRepository();
+            clubs = new SortedSet<Club>(clubRepository.GetClubs());
+           foreach (Club club in clubs)
+            {
+                string name = club.Name;
+                listClub.Items.Add(name);
+            }
         }
 
-        ClubRepository clubRepository = new ClubRepository();
+        private async Task ProcessRepositories()
+        {
+            var client = new HttpClient();
+            var request = new HttpRequestMessage
+            {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri("https://v3.football.api-sports.io/standings?season=2020&league=39"),
+                Headers =
+    {
+        { "x-rapidapi-host", "v3.football.api-sports.io" },
+        { "x-rapidapi-key", "400a397821952a96300b0acd9bf8d12e" },
+    },
+            };
+            using (var response = await client.SendAsync(request))
+            {
+                response.EnsureSuccessStatusCode();
+                var body = await response.Content.ReadAsStringAsync();
+                TestBox.Text = body;
+            }
+        }
 
         private void Button_Add_Club(object sender, RoutedEventArgs e)
         {
@@ -46,6 +77,7 @@ namespace DevopsWPF
             var i = listClub.SelectedItem;
             string name = listClub.SelectedValue.ToString();
             clubRepository.DeleteClub(name);
+            Console.WriteLine(name);
                 listClub.Items.Remove(i);
 
         }

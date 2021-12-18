@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevopsWPF
+namespace DevopsWPF.Dal
 {
     class SqlLiteBaseRepository
     {

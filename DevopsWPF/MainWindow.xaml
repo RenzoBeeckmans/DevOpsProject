@@ -11,6 +11,7 @@
         <ListBox x:Name="listClub" HorizontalAlignment="Left" Height="189" Margin="25,10,0,0" VerticalAlignment="Top" Width="182" SelectionChanged="ListBox_SelectionChanged"/>
         <TextBox x:Name="textClub" HorizontalAlignment="Left" Height="20" Margin="230,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
         <Button Content="Delete" HorizontalAlignment="Left" Height="20" Margin="315,73,0,0" VerticalAlignment="Top" Width="85" Click="Button_Delete_Club" RenderTransformOrigin="0.499,0.012"/>
+        <TextBox x:Name="TestBox" HorizontalAlignment="Left" Height="221" Margin="476,35,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="258"/>
 
     </Grid>
 </Window>

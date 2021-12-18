@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include=".github\workflows\main.yml" />
+    <Content Include=".github\workflows\dotnet.yml" />
   </ItemGroup>
 
   <ItemGroup>

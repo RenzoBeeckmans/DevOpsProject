@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevopsWPF.Models
 {
-    class Club
+    class Club : IComparable<Club>
     {
        
         public string Name { get; set; }
@@ -16,6 +16,11 @@ namespace DevopsWPF.Models
         public Club(string name)
         {
             Name = name;
+        }
+
+        public int CompareTo(Club other)
+        {
+            return Name.CompareTo(other.Name);
         }
     }
 }
